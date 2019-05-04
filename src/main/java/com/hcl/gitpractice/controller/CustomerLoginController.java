@@ -1,7 +1,9 @@
 package com.hcl.gitpractice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,10 +13,12 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
-@RestController("/retailbanking")
+@RestController
+@RequestMapping("/retailbanking")
 public class CustomerLoginController {
 
 	@Autowired
+	@Qualifier("customerLoginService")
 	CustomerLoginService customerLoginService;
 	
 	@ApiOperation(value = "Validate a user login", response= Boolean.class)
