@@ -1,7 +1,6 @@
 package com.hcl.gitpractice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,7 +17,6 @@ import io.swagger.annotations.ApiResponses;
 public class CustomerLoginController {
 
 	@Autowired
-	@Qualifier("customerLoginService")
 	CustomerLoginService customerLoginService;
 	
 	@ApiOperation(value = "Validate a user login", response= Boolean.class)

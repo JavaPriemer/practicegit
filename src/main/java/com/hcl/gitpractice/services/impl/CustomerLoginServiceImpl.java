@@ -1,10 +1,12 @@
 package com.hcl.gitpractice.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.hcl.gitpractice.repositories.CustomerLoginRepository;
 import com.hcl.gitpractice.services.CustomerLoginService;
 
+@Component
 public class CustomerLoginServiceImpl implements CustomerLoginService {
 
 	@Autowired
